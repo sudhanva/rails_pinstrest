@@ -5,10 +5,9 @@
         <h1>Create A New Pin</h1>
       </div>
       <div class="panel-body">
-
- <%= render 'form' %>
-
-<%= link_to "Back", root_path %>
+        <%= image_tag @pin.image.url(:medium) %>
+        <%= render 'form' %>
+        <%= link_to "Back", root_path %>
 </div>
 </div>
 </div>
