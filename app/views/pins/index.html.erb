@@ -1,11 +1,15 @@
-<h3>
-    <% @pin.each do |pin| %>
-    <h2>
-        
-        <%= link_to pin.title ,pin %>
-        <%= link_to (image_tag pin.image.url(:medium)), pin %>
-        
-    </h2>
-    <% end %>
-    
-</h3>
+<div class="container">
+  <div class="row">
+<div class="transitions-enabled" id="pins">
+  <% @pin.each do |pin| %>
+    <div class="box panel panel-default">
+      <%= link_to (image_tag pin.image.url),pin, class: "img-responsive img-rounded" %>
+      <h4 style="font-size:15px;color:#868686;">
+        <%= link_to pin.title, pin %>
+      </h4><hr>
+       <p style="font-size:12px;">Submitted By <%= pin.user.email%></p>
+    </div>
+  <% end %>
+</div>
+</div>
+</div>
